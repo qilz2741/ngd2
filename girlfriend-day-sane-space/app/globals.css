@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Courier New", "Monaco", "Lucida Console", monospace;
+  }
+}
+
+@layer utilities {
+  .font-typewriter {
+    font-family: "Courier New", "Monaco", "Lucida Console", monospace;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  .font-typewriter-bold {
+    font-family: "Courier New", "Monaco", "Lucida Console", monospace;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  /* Paper texture background - updated for sage theme */
+  .bg-paper-texture {
+    background-color: rgba(107, 124, 110, 0.1);
+    background-image: radial-gradient(circle at 25px 25px, rgba(90, 107, 93, 0.08) 2%, transparent 50%),
+      radial-gradient(circle at 75px 75px, rgba(74, 90, 77, 0.06) 2%, transparent 50%),
+      radial-gradient(circle at 100px 25px, rgba(61, 74, 64, 0.04) 1%, transparent 50%);
+    background-size: 100px 100px, 150px 150px, 200px 200px;
+  }
+
+  /* Paper card effect - updated for sage theme */
+  .paper-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    background-image: linear-gradient(90deg, rgba(107, 124, 110, 0.03) 1px, transparent 1px),
+      linear-gradient(rgba(107, 124, 110, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06), inset 0 0 0 1px rgba(107, 124, 110, 0.08);
+  }
+
+  /* Custom sage green colors */
+  .bg-sage-50 {
+    background-color: rgb(247 250 248);
+  }
+
+  .text-sage-300 {
+    color: rgb(134 151 140);
+  }
+
+  .from-sage-50 {
+    --tw-gradient-from: rgb(247 250 248);
+  }
+
+  .to-sage-50 {
+    --tw-gradient-to: rgb(247 250 248);
+  }
+
+  /* Moody sage green background */
+  .bg-moody-sage {
+    background: linear-gradient(135deg, #6b7c6e 0%, #5a6b5d 25%, #4a5a4d 50%, #3d4a40 75%, #2f3a32 100%);
+    background-attachment: fixed;
+  }
+
+  /* Moody sage variants */
+  .bg-sage-dark {
+    background-color: rgb(107, 124, 110);
+  }
+
+  .text-sage-light {
+    color: rgb(200, 210, 203);
+  }
+}
